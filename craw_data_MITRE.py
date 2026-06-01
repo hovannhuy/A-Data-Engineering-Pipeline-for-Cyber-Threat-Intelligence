@@ -2,7 +2,7 @@ import requests
 from pymongo import MongoClient
 
 #Connect to MongoDB
-client = MongoClient('mongodb+srv://yhvn24_db_user:hovannhuy24@cluster0.4kaifw5.mongodb.net/')
+client = 
 db = client['threat_intel_db']
 collection = db['mitre_attack_data']
 
