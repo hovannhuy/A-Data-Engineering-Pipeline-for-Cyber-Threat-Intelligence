@@ -1,38 +1,3 @@
-"""
-embedding.py
-============
-
-Embedding Pipeline cho Cyber Threat Intelligence RAG System
-
-Chức năng:
-──────────────────────────────────────────────
-1. Load nhiều embedding models
-2. Generate embeddings cho chunks
-3. Lưu embeddings vào MongoDB
-4. Benchmark tốc độ embedding
-5. So sánh dimensions / latency / throughput
-6. Hỗ trợ RAG evaluation
-
-Models:
-──────────────────────────────────────────────
-- BAAI/bge-small-en-v1.5
-- sentence-transformers/all-MiniLM-L6-v2
-- BAAI/bge-base-en-v1.5
-
-Collections:
-──────────────────────────────────────────────
-processed_chunks_fixed
-processed_chunks_recursive
-processed_chunks_semantic
-
-Output:
-──────────────────────────────────────────────
-embeddings_fixed
-embeddings_recursive
-embeddings_semantic
-embedding_benchmarks
-"""
-
 import logging
 import time
 import statistics
@@ -47,10 +12,7 @@ from sentence_transformers import SentenceTransformer
 # CONFIG
 # =========================================================
 
-MONGO_URI = (
-    "mongodb+srv://yhvn24_db_user:hovannhuy24"
-    "@cluster0.4kaifw5.mongodb.net/?appName=Cluster0"
-)
+MONGO_URI = 
 
 DB_NAME = "threat_intel_db"
 
