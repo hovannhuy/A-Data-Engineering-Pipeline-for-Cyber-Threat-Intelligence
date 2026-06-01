@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Environment
+.env
+
+# Generated data
+chroma_ti_db/
+exported_data/
+chroma.sqlite3
+# ChromaDB
+*.sqlite3
+*.bin
+
+# Temporary
+*.tmp

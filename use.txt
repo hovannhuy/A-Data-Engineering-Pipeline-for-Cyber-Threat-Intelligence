@@ -1,0 +1,25 @@
+API = AIzaSyCm3yfWzYwIb_7HsQFgwtDOS1ZnvjmgmOc
+run app.py python -m streamlit run app.py
+
+
+📦 CHUNK QUALITY:
+  Strategy       Total   Noise%   AvgLen    UWR
+  ---------------------------------------------
+  fixed           1521     0.4%     1036  0.702
+  recursive       1541     0.3%     1025  0.703
+  semantic        1819     5.1%      891  0.756
+
+🏆 MODEL TỐT NHẤT PER STRATEGY (P@3):
+  fixed        → bge-small    P@3=0.7778
+  recursive    → minilm       P@3=0.7778
+  semantic     → bge-base     P@3=0.7778
+
+🏆 STRATEGY TỐT NHẤT PER MODEL (P@3):
+  bge-small    → fixed        P@3=0.7778
+  minilm       → fixed        P@3=0.7778
+  bge-base     → recursive    P@3=0.7778
+
+🥇 COMBINATION TỐT NHẤT TỔNG THỂ:
+   Strategy=fixed | Model=bge-small
+   macro_score=0.715 | P@1=0.6667 | P@3=0.7778 | P@5=0.7667
+======================================================================
