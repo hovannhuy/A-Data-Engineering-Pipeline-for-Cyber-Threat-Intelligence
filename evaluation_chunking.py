@@ -37,10 +37,7 @@ from pymongo import MongoClient
 # ──────────────────────────────────────────────
 # CONFIG
 # ──────────────────────────────────────────────
-MONGO_URI = (
-    "mongodb+srv://yhvn24_db_user:hovannhuy24"
-    "@cluster0.4kaifw5.mongodb.net/?appName=Cluster0"
-)
+MONGO_URI =
 DB_NAME  = "threat_intel_db"
 
 # SentenceTransformer — không cần API key
@@ -84,11 +81,6 @@ class FixedChunker(BaseChunker):
 
 
 class RecursiveChunker(BaseChunker):
-    """
-    Recursive character splitting — ưu tiên tách tại \\n\\n → \\n → '.' → ' '
-    Tương đương LangChain RecursiveCharacterTextSplitter.
-    Ref: Chroma Technical Report (2024), Section 2.2
-    """
     def __init__(self, chunk_size: int = 1000, chunk_overlap: int = 100):
         self._inner = RecursiveTokenChunker(
             chunk_size=chunk_size,
@@ -100,11 +92,6 @@ class RecursiveChunker(BaseChunker):
 
 
 class SemanticChunker(BaseChunker):
-    """
-    Semantic chunking — nhóm câu có embedding gần nhau thành 1 chunk.
-    Dùng ClusterSemanticChunker (K-Means trên sentence embeddings).
-    Ref: Chroma Technical Report (2024), Section 3.3
-    """
     def __init__(self, embedding_function, max_chunk_size: int = 1000):
         self._inner = ClusterSemanticChunker(
             embedding_function=embedding_function,
