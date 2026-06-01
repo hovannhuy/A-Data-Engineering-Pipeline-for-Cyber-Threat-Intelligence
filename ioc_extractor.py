@@ -15,10 +15,6 @@ class IOCExtractor:
         }
 
     def clean_text(self, text):
-        """
-        Làm sạch dữ liệu thô: Xóa khoảng trắng thừa, ký tự ẩn, HTML tags còn sót lại.
-        Giúp thuật toán Chunking sau này cắt chữ chuẩn xác hơn.
-        """
         if not text:
             return ""
         text = re.sub(r'\n{3,}', '\n\n', text)
@@ -27,10 +23,6 @@ class IOCExtractor:
         return text.strip()
 
     def extract_all_iocs(self, text):
-        """
-        Quét qua đoạn văn bản và nhặt ra toàn bộ IOCs.
-        Trả về một Dictionary chứa các danh sách không trùng lặp.
-        """
         extracted_iocs = {
             "ipv4": [],
             "hashes": [],
