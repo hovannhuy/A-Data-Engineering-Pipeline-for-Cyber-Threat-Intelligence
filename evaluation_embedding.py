@@ -9,7 +9,6 @@ from dataclasses import dataclass, asdict
 from typing import List
 from pymongo import MongoClient
 
-# ── Kiểm tra import (Chỉ để báo lỗi sớm nếu thiếu thư viện) ────────────
 try:
     import chunking_evaluation
     import chromadb
@@ -19,10 +18,7 @@ except ImportError:
 # ──────────────────────────────────────────────
 # CONFIG
 # ──────────────────────────────────────────────
-MONGO_URI = (
-    "mongodb+srv://yhvn24_db_user:hovannhuy24"
-    "@cluster0.4kaifw5.mongodb.net/?appName=Cluster0"
-)
+MONGO_URI = 
 DB_NAME  = "threat_intel_db"
 
 MODELS_TO_TEST = [
@@ -100,9 +96,6 @@ def worker_evaluate_model(model_name: str) -> dict:
     except Exception as e:
         return {"error": str(e), "model_name": model_name}
 
-# ──────────────────────────────────────────────
-# RESULT DATACLASS & EVALUATOR MANAGER
-# ──────────────────────────────────────────────
 @dataclass
 class EmbeddingEvalResult:
     model_name:          str
