@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import certifi # Thư viện này giúp xác thực chứng chỉ tự động
 
 # 1. Cấu hình kết nối
-connection_string = 'mongodb+srv://yhvn24_db_user:hovannhuy24@cluster0.4kaifw5.mongodb.net/?appName=Cluster0'
+connection_string = 
 
 try:
     # Sử dụng certifi.where() để xác thực kết nối an toàn (thay thế cho tlsCAFile=ca)
