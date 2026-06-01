@@ -105,7 +105,7 @@ class TIChunkingPipeline:
                 logging.info(f"Da luu {len(all_records)} chunks vao {target_col_name}")
 
 if __name__ == "__main__":
-    my_cloud_uri = "mongodb+srv://yhvn24_db_user:hovannhuy24@cluster0.4kaifw5.mongodb.net/"
+    my_cloud_uri = 
     pipeline = TIChunkingPipeline(mongo_uri=my_cloud_uri) 
     
     # Lay du lieu tu ca 2 bang
