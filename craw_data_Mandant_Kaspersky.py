@@ -7,7 +7,7 @@ from pymongo import MongoClient
 import certifi
 ca = certifi.where()
 #Connect to MongoDB
-client = MongoClient('mongodb+srv://yhvn24_db_user:hovannhuy24@cluster0.4kaifw5.mongodb.net/?appName=Cluster0', tlsCAFile=ca)
+client = 
 db = client['threat_intel_db']
 db_reports = db['reports_data']
 TI_SOURCES = {
