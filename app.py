@@ -23,8 +23,8 @@ from ioc_extractor import IOCExtractor           # clean_text(), extract_all_ioc
 # ─────────────────────────────────────────────
 # 1. CONFIG
 # ─────────────────────────────────────────────
-MONGO_URI          = "mongodb+srv://yhvn24_db_user:hovannhuy24@cluster0.4kaifw5.mongodb.net/?appName=Cluster0"
-GEMINI_API_KEY     = "AIzaSyCm3yfWzYwIb_7HsQFgwtDOS1ZnvjmgmOc"
+MONGO_URI          = 
+GEMINI_API_KEY     = 
 DB_NAME            = "threat_intel_db"
 EMBEDDING_MODEL    = "BAAI/bge-small-en-v1.5"
 VECTOR_INDEX_NAME  = "vector_index"
